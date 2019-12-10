@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="UTF-8"> 
+<title>Bujim'm instructions</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="shortcut icon" type="image/png" href="don.png"/>
+</head>
+<body>
+<audio id="backgroundMusic" autoplay loop>
+  <source src="backMus.mp3" type="audio/mpeg">
+</audio>
+<div class="main_info">Welcome to BuJim <span id="displayLevel"></span></div>
+<div class="info"><img src="don.png" width="7%"></div>
+<div class="info">Jod is a Sicilian donkey and he LOVES hay!</div>
+<div class="info"><img src="hay.png" width="10%"></div>
+<div class="info">Help him collect it by jumping from one square to another. <br /> 
+Here is an example of how he can move</div>
+<div class="info"><img src="jodmoves.png" width="40%"></div>
+<div class="info">He can jump 2 squares horizontally and vertically <br /> 
+and only one obliquely</div>
+<div class="info">In the beginning you have to decide where to place him <br /> 
+and then help him reach the target score to win!<br /> 
+<a href="game.html">If you are ready to play, click here :)! </a>
+</div>
+<script>
+document.getElementById("target").innerHTML = WinScore;
+document.getElementById("displayLevel").innerHTML = level;
+</script>
+
+</audio>
+</body>
+</html>
