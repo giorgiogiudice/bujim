@@ -25,11 +25,11 @@
 
 body {
     font-family: var(--text-font);
-    background-image: url("farm.jpg");
+    /*background-image: url("farm.jpg");*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: #cccccc;
+    background-color: #a8a8a8;
     color: var(--dark-color);
     min-height: 100vh;
     display: flex;
