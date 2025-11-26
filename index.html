@@ -1,0 +1,73 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bujim's instructions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" type="image/png" href="don.png" />
+</head>
+
+<body>
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="backMus.mp3" type="audio/mpeg">
+  </audio>
+
+  <main class="container">
+    <div class="card">
+      <h1 class="main_info">Welcome to BuJim <span id="displayLevel"></span></h1>
+
+      <div class="character-preview">
+        <img src="don.png" alt="Jod the donkey" class="donkey-img">
+      </div>
+
+      <p class="info-text">Jod is a Sicilian donkey and he LOVES hay!</p>
+
+      <div class="hay-preview">
+        <img src="hay.png" alt="Hay stack" class="hay-img">
+      </div>
+
+      <p class="info-text">Help him collect it by jumping from one square to another.</p>
+
+      <div class="tutorial-section">
+        <p class="info-text">Here is an example of how he can move:</p>
+        <img src="jodmoves.png" alt="Movement example" class="tutorial-img">
+        <p class="info-text">He can jump 2 squares horizontally and vertically, but only one obliquely.</p>
+      </div>
+
+      <p class="info-text">In the beginning you have to decide where to place him and then help him reach the target
+        score to win!</p>
+
+      <a href="game.html" class="play-button">Play Now!</a>
+    </div>
+  </main>
+
+  <script>
+    // Mock variables if they don't exist in this context, though originally they seemed expected
+    // But index.html doesn't include gameEngine.js or levelCalculator.js in the original code.
+    // The original code had: document.getElementById("target").innerHTML = WinScore;
+    // But WinScore wasn't defined in index.html. It seems like a bug in the original code or reliance on global state that isn't there.
+    // I will check if I need to include the JS files or if I should just remove the broken script.
+    // Looking at original index.html, it had:
+    // document.getElementById("target").innerHTML = WinScore;
+    // document.getElementById("displayLevel").innerHTML = level;
+    // But "target" element didn't exist in index.html (it was in game.html).
+    // "displayLevel" did exist.
+    // I'll leave the script but wrap it in a try-catch or check if vars exist to prevent errors, 
+    // or better yet, I'll include the necessary JS if it's meant to show the level.
+    // However, levelCalculator.js relies on localStorage.
+  </script>
+  <script src="levelCalculator.js"></script>
+  <script>
+    if (typeof level !== 'undefined') {
+      const levelDisplay = document.getElementById("displayLevel");
+      if (levelDisplay) levelDisplay.innerHTML = " - Level " + level;
+    }
+  </script>
+
+</body>
+
+</html>
